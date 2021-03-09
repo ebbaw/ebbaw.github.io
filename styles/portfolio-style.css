@@ -10,7 +10,7 @@ body#about, body#case-page {
     color: #3f3f3f;
 }
 
-body#index, body#WIP {
+body#index, body#WIP, body#page-not-found {
     background-color: #000;
     color: #fff;
 }
@@ -272,9 +272,10 @@ header .flex {
 }
 
 /*--- WIP ---*/
-.wip-text {
+.single-centered {
+    height: 90vh;
     text-align: center;
-    margin-top: 50vmin;
+    padding-top: 40vh;
 }
 
 /*--- Tablet ---*/

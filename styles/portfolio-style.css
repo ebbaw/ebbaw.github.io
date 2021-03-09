@@ -273,8 +273,11 @@ header .flex {
 
 /*--- WIP ---*/
 .single-centered {
-    height: 90vh;
+    height: 80vh;
     text-align: center;
+}
+
+#wip-text, #page-not-found-text {
     padding-top: 40vh;
 }
 

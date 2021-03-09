@@ -10,7 +10,7 @@ body#about, body#case-page {
     color: #3f3f3f;
 }
 
-body#index {
+body#index, body#WIP {
     background-color: #000;
     color: #fff;
 }
@@ -271,6 +271,13 @@ header .flex {
     margin-bottom: 1rem;
 }
 
+/*--- WIP ---*/
+.wip-text {
+    text-align: center;
+    margin-top: 50vmin;
+}
+
+/*--- Tablet ---*/
 @media (max-width: 928px) {
     .case.grid {
         grid-template-columns: 1fr;

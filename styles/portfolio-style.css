@@ -122,7 +122,7 @@ html {
 
 .vl {
     border-left: 1px solid white;
-    height: 300px;
+    height: 250px;
     position: relative;
     margin-left: 50%;
     margin-top: 5rem;
@@ -149,20 +149,17 @@ header .flex {
 }
 
 /*---- Hero ----*/
-
-#hero {
+.hero-text {
     max-width: 700px;
     margin: 0 auto;
-    padding-top: 12rem;
-    padding-right: 10%;
-    padding-left: 10%;
     text-align: center;
+    margin-top: 25vh;
 }
 
 /*---- Cases ----*/
 
 .case {
-    padding: 10rem 0;
+    margin: 8rem 0;
 }
 
 .case img {

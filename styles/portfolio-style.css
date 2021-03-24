@@ -61,7 +61,7 @@ p {
     margin-bottom: 0.5rem;
     font-size: 0.8rem;
     text-transform: uppercase;
-    font-weight:bold;
+    font-weight: bold;
     color: #c7c7c7;
 }
 
@@ -83,12 +83,13 @@ ul {
     list-style-type: none;
 }
 
-hr {            
-    background-color: rgb(223, 223, 223);;
+hr {
+    background-color: rgb(223, 223, 223);
+    ;
     height: 1px;
     width: 90%;
     margin-bottom: 2rem;
-  }
+}
 
 /*
 img {
@@ -167,17 +168,18 @@ html {
 header {
     height: 80px;
     width: 100%;
+    padding: 1rem 0;
     background-color: var(--primary-black);
 }
 
 header .flex {
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5rem;
 }
 
 #nav-ul li {
-    margin-left: 2rem;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 #logo {
@@ -185,6 +187,7 @@ header .flex {
 }
 
 /*---- Hero ----*/
+
 .hero-text {
     max-width: 700px;
     margin: 0 auto;
@@ -193,6 +196,7 @@ header .flex {
 }
 
 /*---- Index cases ----*/
+
 .big-container {
     overflow: hidden;
 }
@@ -232,6 +236,7 @@ header .flex {
 }
 
 /*--- Case page ---*/
+
 #case-intro .outer-case {
     margin: 0 auto;
 }
@@ -341,17 +346,30 @@ header .flex {
 }
 
 /*--- WIP ---*/
-@keyframes blink {
-    0%   {opacity: 0;}
-    75%  {opacity: 100;}
-    100% {opacity: 0;}
-  }
 
-  @keyframes fadein {
-    0%   {opacity: 0;}
-    50%  {opacity: 0;}
-    100% {opacity: 100;}
-  }
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
 
 .single-centered {
     height: 80vh;
@@ -369,9 +387,10 @@ header .flex {
     transform: translate(-50%, -50%);
     animation-name: fadein;
     animation-duration: 6s;
+    white-space: nowrap;
 }
 
-#WIP #wip-logo{
+#WIP #wip-logo {
     position: absolute;
     max-width: 300px;
     top: 50%;
@@ -381,6 +400,7 @@ header .flex {
     animation-duration: 3s;
     opacity: 0;
 }
+
 /*--- Tablet ---*/
 
 @media (max-width: 928px) {
@@ -403,7 +423,6 @@ header .flex {
     .inner-index-case {
         max-width: 100%;
     }
-    
 }
 
 /*--- Mobile ---*/
@@ -422,12 +441,10 @@ header .flex {
         margin-top: 0;
         margin-bottom: 1.5rem;
     }
-    
     h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        line-height: 1.5;
-        margin-bottom: 1.5rem;
+        font-size: 2rem;
     }
-    
+    #WIP #wip-logo {
+        max-width: 200px;
+    }
 }

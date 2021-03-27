@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
-    <title>Ebba Wåhlin Portfolio</title>
+    <title>Ebba Wåhlin</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ebba Wåhlin">
-    <link rel="stylesheet" type="text/css" href="../styles/portfolio-style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/portfolio-style2.css">
     <link rel="stylesheet" href="https://use.typekit.net/emz7xae.css">
+    <link rel="icon" href="../favicon.svg" type="image/svg"> 
 </head>
 
 <body id="index">
     <header>
-        <div class="container flex">
-            <a href="index.html" id="logo">Ebba Wåhlin</a>
+        <div class="container">
             <nav id="main-nav">
                 <ul id="nav-ul" class="flex">
-                    <li><a href="index.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li class="nav-word"><a href="index.html">Work</a></li>
+                    <li><a href="index.html"><img id="logo" src="../media/newlogo.png" alt="EW logo"></a></li>
+                    <li class="nav-word"><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,21 +33,35 @@
         <div class="vl"></div>
     </section>
 
-    <section id="cases" class="container">
-        <div class="case grid">
-            <div class="case-description">
-                <p class="overline">UX Design</p>
-                <h2>Online Tool for Visual Communication Resources</h2>
-                <p>Together with my team I delivered a mockup of a web based tool for special educators using
-                    visual
-                    communication with their students.</p>
-                <a href="case.html" class="btn">Learn more</a>
+    <section id="index-cases" class="big-container">
+        <div class="outer-case left">
+            <div class="inner-case">
+                <img class="case-image-left" src="../media/tottot_devices.png"
+                    alt="iMac och iPhone showing design work">
+                <p class="overline">Web app</p>
+                <h2>Tottot opinion game</h2>
+                <p>Developing front end, back end and databases to create a web application for an online board
+                    game.
+                </p>
+                <a href="case.html" class="btn">View project &#10132;</a>
             </div>
-            <div class="case-image">
-                <img src="../media/spsm_imac.png" alt="iMac showing design work">
+        </div>
+        <div class="outer-case">
+            <div class="inner-case">
+                <img class="case-image-right" src="../media/ultraglozz_imac.png" alt="iMac showing design work">
+                <p class="overline">Web design</p>
+                <h2>Rework of Ultraglozz's Website</h2>
+                <p>As part of a course assignment I did a total redesign of UltraGlozz's website and implemented it.</p>
+                <a href="case-ultraglozz.html" class="btn">View project &#10132;</a>
             </div>
         </div>
     </section>
+
+    <div class="to-top">
+        <a href="#index">
+            <p>&#10132; <br> To the top</p>
+        </a>
+    </div>
 
 </body>
 

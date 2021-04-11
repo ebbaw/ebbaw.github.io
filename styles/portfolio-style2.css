@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 :root {
     --primary-white: #f9f9f9;
     --primary-black: #121111;
@@ -15,14 +16,42 @@
 }
 
 body#about, body.case-page {
-    background-color: var(--primary-white);
+    background-color: var(--primary-black);
     color: var(--text-black);
 }
 
 body#index, body#WIP, body#page-not-found {
     background-color: var(--primary-black);
     color: var(--text-white);
+    
 }
+
+#WIP::after, #page-not-found::after {
+    animation: grain 8s steps(10) infinite;
+    content: "";
+    background-image: url("../media/grain2.png");
+    height: 300%;
+    left: -50%;
+    opacity: 0.2;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    z-index: -1;
+}
+
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  }
+  
 
 .display {
     margin-top: -1rem;
@@ -93,22 +122,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/*
-.btn {
-    display: inline-block;
-    padding: 10px 40px;
-    outline: none;
-    border-radius: 25px;
-    color: var(--primary-white);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-top: 3rem;
-    border: 2px solid white;
-    transition: 0.2s;
-}
-*/
-
 .btn {
     display: inline-block;
     outline: none;
@@ -117,12 +130,6 @@ html {
     margin-top: 3rem;
     transition: 0.2s;
 }
-
-/*
-.btn:hover {
-    color: var(--text-black);
-}
-*/
 
 /*--- ---*/
 
@@ -160,7 +167,6 @@ header {
     height: 80px;
     width: 100%;
     padding: 1rem 0;
-    background-color: var(--primary-black);
 }
 
 header .flex {
@@ -187,8 +193,9 @@ header .flex {
 }
 
 /*---- Hero ----*/
+
 .hero-text {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     text-align: center;
     margin-top: 25vh;
@@ -230,8 +237,9 @@ header .flex {
     left: -20%;
 }
 
-.to-top {
+.ending {
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 /*--- Case page ---*/
@@ -262,18 +270,60 @@ header .flex {
     grid-template-columns: 2fr 3fr 3fr;
 }
 
+.case-study {
+    background-color: var(--primary-white);
+}
+
+.case-study p {
+    font-weight: 400;
+}
+
+/* .case-study-text {
+    max-width: 600px;
+    margin: 0 auto;
+} */
+
+.inner-case-study h2 {
+    max-width: 700px;
+    margin: 0 auto;
+} 
+
+.inner-case-study p {
+    max-width: 700px;
+    margin: 1rem auto;
+}
+
 .inner-case-study {
     margin-top: 4rem;
 }
 
-.inner-case-study.grid {
-    grid-template-columns: 1fr 4fr;
+.inner-case-study div {
+    margin-bottom: 3rem;
 }
 
-.case-study-text div {
-    margin-bottom: 4rem;
+.inner-case-study a {
+    color: var(--text-black);
+    text-decoration: underline;
 }
 
+.inner-case-study img {
+    display:block;
+    max-width: 100%;
+    margin: 2rem auto 1rem auto;
+}
+
+.caption {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #7e7e7e;
+    font-style: italic;
+}
+
+.border {
+    border: 1px solid #cecece;
+}
+
+/*
 .side-nav {
     margin-top: 1rem;
 }
@@ -286,13 +336,14 @@ header .flex {
     margin-bottom: 1rem;
     font-weight: 500;
 }
+*/
 
 /*--- About ---*/
 
 .intro {
     height: 70vh;
+    max-height: 600px;
     padding: 5rem 0;
-    background-color: var(--primary-black);
     color: var(--text-white);
 }
 
@@ -314,13 +365,16 @@ header .flex {
 }
 
 .intro .vl {
-    height: 300px;
     margin-left: 25%;
     margin-top: -3rem;
 }
 
 #resume .overline {
     color: #7e7e7e;
+}
+
+#resume {
+    background-color: var(--primary-white);
 }
 
 .role {
@@ -388,7 +442,10 @@ header .flex {
 }
 
 #page-not-found-text {
-    padding-top: 35vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #WIP h1 {
@@ -440,6 +497,66 @@ header .flex {
     }
 }
 
+/*--- Extra for intro ---*/
+@media (max-width: 764px) { 
+    .case-intro.grid, #about-ebba.grid {
+        grid-template-columns: 1fr;
+    }
+    .intro {
+        padding-top: 3rem;
+        padding-bottom: 0;
+        max-height: fit-content;
+        height: fit-content;
+    }
+    #intro-image {
+        order: -1;
+        max-width: 50%;
+    }
+    #portrait {
+        order: -1;
+        max-width: 60%;
+        margin: auto;
+    }
+    .intro .vl {
+        height: 100px;
+        margin-left: 50%;
+        margin-top: 0rem;
+    }
+    #resume .vl, .case-study .vl {
+        height: 100px;
+        margin-left: 50%;
+    }
+}
+
+/*--- Extra for nav and cooontent---*/
+
+@media (max-width: 659px) {
+    header {
+        height: 120px;
+    }
+    #nav-ul.flex {
+        gap: 2rem;
+    }
+    #nav-ul li:nth-child(2) {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+    #nav-ul li:not(:nth-child(2)) {
+        flex: 1;
+    }
+    .nav-word {
+        max-width: 7rem;
+    }
+    .inner-case-study.grid {
+        grid-template-columns: 1fr;
+    }
+    .side-nav {
+        display: none;
+    }
+
+}
+
 /*--- Mobile ---*/
 
 @media (max-width: 411px) {
@@ -450,13 +567,15 @@ header .flex {
         padding: 0 10px;
     }
     .display {
-        font-size: 2.5rem;
-        font-weight: bold;
+        font-size: 2rem;
         line-height: 1.5;
         margin-top: 0;
         margin-bottom: 1.5rem;
     }
     h1 {
         font-size: 2rem;
+    }
+    .hero-text {
+        margin-top: 15vh;
     }
 }

@@ -9,7 +9,7 @@
     <meta name="author" content="Ebba Wåhlin">
     <link rel="stylesheet" type="text/css" href="../styles/portfolio-style2.css">
     <link rel="stylesheet" href="https://use.typekit.net/emz7xae.css">
-    <link rel="icon" href="../favicon.svg" type="image/svg"> 
+    <link rel="icon" href="../favicon.svg" type="image/svg">
 </head>
 
 <body id="ultraglozz-page" class="case-page">
@@ -30,27 +30,28 @@
             <div class="case-intro grid">
                 <div class="intro-text">
                     <div>
-                        <p class="overline">Web app</p>
-                        <h1>Tottot opinion game</h1>
-                        <p>Developing front end, back end and databases to create a web application for an online board
-                            game.</p>
+                        <p class="overline">Web design</p>
+                        <h1>Ultraglozz</h1>
+                        <p>As part of a course assignment I did a total redesign of UltraGlozz's website and implemented
+                            it. Their current website was broken down and analysed, and the new design were prototyped
+                            in Adobe XD and then parts were implemented in HTML, CSS and JavaScript.</p>
                     </div>
                     <div class="intro-facts grid">
                         <div>
                             <p class="overline">Role</p>
-                            <p>Full stack</p>
+                            <p>Web designer</p>
                         </div>
                         <div>
                             <p class="overline">Deliverable</p>
-                            <p>Web application</p>
+                            <p>Prototype</p>
                         </div>
                         <div>
                             <p class="overline">Timeframe</p>
-                            <p>1.5 months</p>
+                            <p>3 weeks (50% speed)</p>
                         </div>
                     </div>
                 </div>
-                <img id="intro-image" src="../media/tottot_iphone.png" alt="tottot on iPhone">
+                <img id="intro-image" src="../media/ultraglozz_cover.png" alt="Landing page of UltraGlozz redesign">
             </div>
             <div class="vl"></div>
         </div>
@@ -59,39 +60,69 @@
     <section class="case-study">
         <div class="container">
             <div class="vl"></div>
-            <div class="inner-case-study grid">
-                <div class="side-nav">
-                    <!-- TODO sticky -->
-                    <ul>
-                        <li><a href="#problem">The problem</a></li>
-                        <li><a href="#chapter">Chapter</a></li>
-                        <li><a href="#wordness">Wordness</a></li>
-                    </ul>
+            <div class="inner-case-study">
+                <div id="background">
+                    <h2>Background</h2>
+                    <p>Ultraglozz is a Danish company producing multi-use polishes and boat accessories. They are
+                        selling their products via resellers and on exhibitions, and not on their website. The
+                        purpose of their website is give information about their products and upcoming exhibitions,
+                        as well as a way for people to contact them. Visit their website <a
+                            href="http://ultraglozz.com/">here</a>.</p>
+                    <p>This project was done as a part of a course assignment and UltraGlozz has not been a part of the
+                        process. However, they have
+                        approved me using some of their material in this portfolio.</p>
                 </div>
-                <div class="case-study-text">
-                    <div id="problem">
-                        <h2>The problem</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                            the Semantics, a large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. </p>
-                    </div>
-                    <div id="chapter">
-                        <h2>Chapter</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                            the Semantics, a large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. </p>
-                    </div>
-                    <div id="wordness">
-                        <h2>Wordness</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                            the Semantics, a large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. </p>
-                    </div>
+                <div id="problem">
+                    <h2>The problem</h2>
+                    <p>The current web design has several design issues that flaws the experience and overall
+                        usability of the website. Below is their landing page.</p>
+                    <img class="border" src="../media/ultraglozz-landing.png" alt="Screenshot of Ultraglozz's landing page">
+                    <p class="caption">UltraGlozz's own design</p>
+                    <p>There is no obvious part of the landing page that draws the users attention. The header is a big
+                        slide show of pictures that takes up room from the products, and the first information we get
+                        about the products are small pictures without any explaination. When looking for information
+                        about the site and company we get a long quote about money.</p>
+                    <p>The newsletter sign-up does not entice interest, nor explains the advantages of signing up. Why
+                        should the user submit their e-mail? The latest news on the website are from four years ago, so
+                        what can we expect from this newsletter?</p>
+                    <p>Moving on to language settings. Flags represent countries and would make sense if one where
+                        chosing their region because that would affect the products and/or support. However, in this
+                        case it only changes the language and therefore the flags are misleading. Common for the flags
+                        and navbar is that the active option is gray, making it look disabled rather than active.</p>
+                    <p> UltraGlozz have three polishes and two polish related product, but they have put everything
+                        under "Superpolish" which is the name of their most popular polish. If we click "Superpolish" in
+                        the navbar, we get a long list of mixed items. The first eight are related to the Superpolish
+                        product, and the last four are other products. The hierachry is misleading and makes it
+                        difficult to navigate correctly.</p>
+                    <img class="border" src="../media/ultraglozz_dropdown.png"
+                        alt="Screenshot of dropdown meny when superpolish is clicked in the navbar">
+                    <p class="caption">Dropdown menu from navbar</p>
+                    <p>The items in the dropdown follows us to the product page for UltraGlozz Superpolish, as seen to the left in the screenshot below. However, it does not always contain the same items. The active item looked disabled in the navbar, and this time it looks like an input field. As previously mentioned, the first eight (now nine) items are related to the same product, but the information in them overlap each other. There is no distinct hierachry of the product information and it is not easy to find the information you are looking for.</p>
+                    <img class="border" src="../media/ultraglozz_productpage.png"
+                        alt="Screenshot of Ultraglozz's product page for UltraGlozz Superpolish">
+                    <p class="caption">Product page for UltraGlozz superpolish</p>
+                    <p>There is much more to say about the current design, but now it is time to move on to my solution! </p>
                 </div>
-
+                <div id="solution">
+                    <h2>My solution</h2>
+                    <p>I created simple wireframes in Adobe XD for desktop and mobile, and a mock-up of the desktop
+                        version.</p>
+                    <img src="../media/ultraglozz_all.png" alt="">
+                </div>
+                <div id="process">
+                    <h2>The process</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
+                        the Semantics, a large language ocean. A small river named Duden flows by their place and
+                        supplies it with the necessary regelialia. </p>
+                </div>
+                <div id="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
+                        the Semantics, a large language ocean. A small river named Duden flows by their place and
+                        supplies it with the necessary regelialia. </p>
+                </div>
             </div>
         </div>
     </section>

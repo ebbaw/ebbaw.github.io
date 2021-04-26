@@ -9,7 +9,7 @@
     <meta name="author" content="Ebba Wåhlin">
     <link rel="stylesheet" type="text/css" href="../styles/portfolio-style2.css">
     <link rel="stylesheet" href="https://use.typekit.net/emz7xae.css">
-    <link rel="icon" href="../favicon.svg" type="image/svg">  
+    <link rel="icon" href="../favicon.svg" type="image/svg">
 </head>
 
 <body id="tottot-page" class="case-page">
@@ -32,7 +32,7 @@
                     <div>
                         <p class="overline">Web app</p>
                         <h1>Tottot opinion game</h1>
-                        <p>Developing front end, back end and databases to create a web application for an online board
+                        <p>Developing front end, back end and databases to create a web application for an online quiz
                             game.</p>
                     </div>
                     <div class="intro-facts grid">
@@ -46,11 +46,11 @@
                         </div>
                         <div>
                             <p class="overline">Timeframe</p>
-                            <p>1.5 months</p>
+                            <p>1.5 months and going</p>
                         </div>
                     </div>
                 </div>
-                <img id="intro-image" src="../media/tottot_iphone.png" alt="tottot on iPhone">
+                <img class="intro-image" src="../media/tottot_iphone.png" alt="tottot on iPhone">
             </div>
             <div class="vl"></div>
         </div>
@@ -59,39 +59,50 @@
     <section class="case-study">
         <div class="container">
             <div class="vl"></div>
-            <div class="inner-case-study grid">
-                <div class="side-nav">
-                    <!-- TODO sticky -->
-                    <ul>
-                        <li><a href="#problem">The problem</a></li>
-                        <li><a href="#chapter">Chapter</a></li>
-                        <li><a href="#wordness">Wordness</a></li>
-                    </ul>
+            <div class="inner-case-study">
+                <div id="background">
+                    <h2>Background</h2>
+                    <p>This project started as a course project in Database Technology and webbased systems, but is now
+                        something that my teammates and I work on on our freetime. The originial application was built
+                        with Codeigniter, but is now being rebuilt with React, Node.js and Express. The application is
+                        getting a total makeover visually as the current one was built with full focus on the backend,
+                        and therefore this case do not include any screenshots of the GUI. This project will be updated
+                        when the new version comes live.</p>
                 </div>
-                <div class="case-study-text">
-                    <div id="problem">
-                        <h2>The problem</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                            the Semantics, a large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. </p>
-                    </div>
-                    <div id="chapter">
-                        <h2>Chapter</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                            the Semantics, a large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. </p>
-                    </div>
-                    <div id="wordness">
-                        <h2>Wordness</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                            the Semantics, a large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. </p>
-                    </div>
+                <div id="problem">
+                    <h2>The problem</h2>
+                    <p>There are plenty of party games out there, but many has the sole purpose to get drunk, or require
+                        so much focus on the game that you hang out with the game more than with each other. We wanted
+                        to create a game that created fun and interesting discussions.</p>
                 </div>
-
+                <div id="solution">
+                    <h2>Our solution</h2>
+                    <p>Our product is a simple quiz app, but without any right or wrong answers. Every question is about
+                        personal preferences or opinions. The user choses one of four categories to start the game and
+                        is then presented with one question at a time. The questions range from "Do you believe in life
+                        after death" to "Do you fold or crumple your toilet paper?" and the user always have two answers
+                        to chose between. They can also skip the question. After answering they can see how others have
+                        answered. This makes it possible for further discussion. If the user just want to browse others
+                        opinions without playing the game, they can chose to list all questions. In this view, they can
+                        search, sort and filter all questions.</p>
+                    <p>Apart from the public website, we also built an admin page where we can sign in to add, edit and
+                        delete questions.</p>
+                        <p>The application was named "tottot", where "tot" is a abbreviation of "this or that".</p>
+                </div>
+                <div id="process">
+                    <h2>The process</h2>
+                    <p>This project was the first database project any of us had done, and neither one of us had much experience in web development. We had to use a MVC structure and heard about Codeigniter, so that was what we chose to use.</p>
+                    <p>Before any code was written, we brainstormed and designed the structure of the application and the database. We began with the database containing all questions, modes (categories) and admin users.</p>
+                    <img class="small-img" src="../media/tottot-er-detailed.png" alt="ER schema of tottot database">
+                    <p class="caption">ER-schema of tottot database</p>
+                    <p>We also made some sketches of flow diagrams on how the user where to interact with the application.</p>
+                    <img src="../media/tottot-flow.png" alt="Flow diagram" class="small-img">
+                    <p class="caption">Flow diagram</p>
+                </div>
+                <div id="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>The final product is a fully functional application, but since we made this as beginner web developers it does have some flaws. The security regaring sessions could be improved, as could the general logic and flow of the game. After learning more about the development tools out there, we came to the conclusion that Codeigniter is not the one we want to use.</p>
+                </div>
             </div>
         </div>
     </section>

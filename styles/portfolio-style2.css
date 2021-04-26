@@ -23,7 +23,6 @@ body#about, body.case-page {
 body#index, body#WIP, body#page-not-found {
     background-color: var(--primary-black);
     color: var(--text-white);
-    
 }
 
 #WIP::after, #page-not-found::after {
@@ -40,22 +39,41 @@ body#index, body#WIP, body#page-not-found {
 }
 
 @keyframes grain {
-    0%, 100% { transform:translate(0, 0) }
-    10% { transform:translate(-5%, -10%) }
-    20% { transform:translate(-15%, 5%) }
-    30% { transform:translate(7%, -25%) }
-    40% { transform:translate(-5%, 25%) }
-    50% { transform:translate(-15%, 10%) }
-    60% { transform:translate(15%, 0%) }
-    70% { transform:translate(0%, 15%) }
-    80% { transform:translate(3%, 35%) }
-    90% { transform:translate(-10%, 10%) }
-  }
-  
+    0%, 100% {
+        transform: translate(0, 0)
+    }
+    10% {
+        transform: translate(-5%, -10%)
+    }
+    20% {
+        transform: translate(-15%, 5%)
+    }
+    30% {
+        transform: translate(7%, -25%)
+    }
+    40% {
+        transform: translate(-5%, 25%)
+    }
+    50% {
+        transform: translate(-15%, 10%)
+    }
+    60% {
+        transform: translate(15%, 0%)
+    }
+    70% {
+        transform: translate(0%, 15%)
+    }
+    80% {
+        transform: translate(3%, 35%)
+    }
+    90% {
+        transform: translate(-10%, 10%)
+    }
+}
 
 .display {
     margin-top: -1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -185,7 +203,7 @@ header .flex {
 }
 
 .nav-word:hover {
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.4rem;
 }
 
 #logo {
@@ -248,20 +266,22 @@ header .flex {
     margin: 0 auto;
 }
 
-.case-image {
-    position: absolute;
-    max-width: 60%;
-    right: -25%;
-}
-
 .case-intro.grid {
     align-items: center;
     grid-template-columns: 3fr 2fr;
 }
 
-#intro-image {
+#ultraglozz-page .case-intro.grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.intro-image {
     max-width: 200%;
     margin: auto;
+}
+
+#ultraglozz-page .intro-image {
+    max-width: 100%;
 }
 
 .intro-facts.grid {
@@ -278,23 +298,45 @@ header .flex {
     font-weight: 400;
 }
 
-/* .case-study-text {
-    max-width: 600px;
-    margin: 0 auto;
-} */
-
 .inner-case-study h2 {
     max-width: 700px;
     margin: 0 auto;
-} 
+}
+
+.inner-case-study h3 {
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+}
+
+.inner-case-study h4 {
+    max-width: 700px;
+    margin: 0 auto -1rem auto;
+}
 
 .inner-case-study p {
     max-width: 700px;
     margin: 1rem auto;
 }
 
+.inner-case-study ul {
+    max-width: 700px;
+    margin: 1rem auto;
+    line-height: 1.8;
+}
+
+.inner-case-study li {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.inner-case-study li::before {
+    content: "\2013";
+    margin-right: 1rem;
+}
+
 .inner-case-study {
     margin-top: 4rem;
+    margin-bottom: 5rem;
 }
 
 .inner-case-study div {
@@ -306,10 +348,27 @@ header .flex {
     text-decoration: underline;
 }
 
+#paper.grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.img-shadow {
+    box-shadow: 10px 10px 25px #837D7914;
+}
+
+#wireframe div {
+    margin: 0;
+}
+
 .inner-case-study img {
-    display:block;
+    display: block;
     max-width: 100%;
     margin: 2rem auto 1rem auto;
+}
+
+.small-img {
+    width: 50%;
 }
 
 .caption {
@@ -323,20 +382,18 @@ header .flex {
     border: 1px solid #cecece;
 }
 
-/*
-.side-nav {
-    margin-top: 1rem;
+.scroll-me-up {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
 }
 
-.side-nav a {
-    color: var(--text-black);
+.scroll-me-up i {
+    color: var(--primary-black);
 }
-
-.side-nav li {
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-*/
 
 /*--- About ---*/
 
@@ -349,10 +406,6 @@ header .flex {
 
 .intro img {
     max-height: 500px;
-}
-
-.intro-text {
-    margin: auto;
 }
 
 .about-contact.grid {
@@ -380,7 +433,7 @@ header .flex {
 .role {
     margin-left: 0.5rem;
     font-weight: 300;
-    ccolor: #7e7e7e;
+    color: #7e7e7e;
 }
 
 #resume .vl, .case-study .vl {
@@ -470,6 +523,13 @@ header .flex {
     opacity: 0;
 }
 
+@media (max-width: 1150px) {
+    .scroll-me-up {
+        background-color: var(--primary-white);
+        padding: 1rem;
+    }
+}
+
 /*--- Tablet ---*/
 
 @media (max-width: 928px) {
@@ -495,10 +555,17 @@ header .flex {
     .inner-case {
         max-width: 100%;
     }
+    .intro .vl {
+        margin-top: 2rem;
+    }
+    #wireframe.grid {
+        gap: 1rem;
+    }
 }
 
 /*--- Extra for intro ---*/
-@media (max-width: 764px) { 
+
+@media (max-width: 764px) {
     .case-intro.grid, #about-ebba.grid {
         grid-template-columns: 1fr;
     }
@@ -551,10 +618,15 @@ header .flex {
     .inner-case-study.grid {
         grid-template-columns: 1fr;
     }
-    .side-nav {
-        display: none;
+    #paper.grid {
+        grid-template-columns: 1fr;
     }
-
+    .intro-facts.grid {
+        grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+    }
+    #resume .grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /*--- Mobile ---*/

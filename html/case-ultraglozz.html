@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/portfolio-style2.css">
     <link rel="stylesheet" href="https://use.typekit.net/emz7xae.css">
     <link rel="icon" href="../favicon.svg" type="image/svg">
+    <script src="https://kit.fontawesome.com/79ab7208d9.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="ultraglozz-page" class="case-page">
@@ -33,8 +34,9 @@
                         <p class="overline">Web design</p>
                         <h1>Ultraglozz</h1>
                         <p>As part of a course assignment I did a total redesign of UltraGlozz's website and implemented
-                            it. Their current website was broken down and analysed, and the new design were prototyped
-                            in Adobe XD and then parts were implemented in HTML, CSS and JavaScript.</p>
+                            parts if it with HTML, CSS and JavaScript. Their current website was broken down and
+                            analysed, and the new design were prototyped in Adobe XD. This case focuses on the prototype
+                            design.</p>
                     </div>
                     <div class="intro-facts grid">
                         <div>
@@ -47,11 +49,11 @@
                         </div>
                         <div>
                             <p class="overline">Timeframe</p>
-                            <p>3 weeks (50% speed)</p>
+                            <p>1 week (50% speed)</p>
                         </div>
                     </div>
                 </div>
-                <img id="intro-image" src="../media/ultraglozz_cover.png" alt="Landing page of UltraGlozz redesign">
+                <img class="intro-image" src="../media/ultraglozz_imac.png" alt="iMac showing design work">
             </div>
             <div class="vl"></div>
         </div>
@@ -76,7 +78,8 @@
                     <h2>The problem</h2>
                     <p>The current web design has several design issues that flaws the experience and overall
                         usability of the website. Below is their landing page.</p>
-                    <img class="border" src="../media/ultraglozz-landing.png" alt="Screenshot of Ultraglozz's landing page">
+                    <img class="border" src="../media/ultraglozz-landing.png"
+                        alt="Screenshot of Ultraglozz's landing page">
                     <p class="caption">UltraGlozz's own design</p>
                     <p>There is no obvious part of the landing page that draws the users attention. The header is a big
                         slide show of pictures that takes up room from the products, and the first information we get
@@ -96,36 +99,183 @@
                         difficult to navigate correctly.</p>
                     <img class="border" src="../media/ultraglozz_dropdown.png"
                         alt="Screenshot of dropdown meny when superpolish is clicked in the navbar">
-                    <p class="caption">Dropdown menu from navbar</p>
-                    <p>The items in the dropdown follows us to the product page for UltraGlozz Superpolish, as seen to the left in the screenshot below. However, it does not always contain the same items. The active item looked disabled in the navbar, and this time it looks like an input field. As previously mentioned, the first eight (now nine) items are related to the same product, but the information in them overlap each other. There is no distinct hierachry of the product information and it is not easy to find the information you are looking for.</p>
+                    <p class="caption">UltraGlozz's own design of the dropdown menu from navbar</p>
+                    <p>The items in the dropdown follows us to the product page for UltraGlozz Superpolish, as seen to
+                        the left in the screenshot below. However, it does not always contain the same items. The active
+                        item looked disabled in the navbar, and this time it looks like an input field. As previously
+                        mentioned, the first eight (now nine) items are related to the same product, but the information
+                        in them overlap each other. There is no distinct hierachry of the product information and it is
+                        not easy to find the information you are looking for.</p>
                     <img class="border" src="../media/ultraglozz_productpage.png"
                         alt="Screenshot of Ultraglozz's product page for UltraGlozz Superpolish">
-                    <p class="caption">Product page for UltraGlozz superpolish</p>
-                    <p>There is much more to say about the current design, but now it is time to move on to my solution! </p>
+                    <p class="caption">UltraGlozz's own design of the product page for UltraGlozz superpolish</p>
+                    <p>There is much more to say about the current design, but now it is time to move on to my solution!
+                    </p>
                 </div>
                 <div id="solution">
                     <h2>My solution</h2>
-                    <p>I created simple wireframes in Adobe XD for desktop and mobile, and a mock-up of the desktop
-                        version.</p>
-                    <img src="../media/ultraglozz_all.png" alt="">
+                    <p>I delimitated the scope of the project by only focusing on the polish products. This made the
+                        purpose of the website much clearer. I created a mock-up in Adobe XD and then implemented parts
+                        of the website with plain HTML, CSS and some JavaScript.</p>
+                    <img src="../media/ultraglozz_all.png" alt="Mock-up of the new design">
+                    <p class="caption">Mock-up of the new design</p>
                 </div>
                 <div id="process">
                     <h2>The process</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                        the Semantics, a large language ocean. A small river named Duden flows by their place and
-                        supplies it with the necessary regelialia. </p>
+                    <h3>Planning the content</h3>
+                    <p>After analysing UltraGlozz's own design, I made a plan for the new design. My main goal of the
+                        new design was to make the content easy to understand and the navigation intuitive. I wrote down
+                        what pages I wanted in the new design and what they should contain.</p>
+                    <ul>
+                        <li>The navbar will move to the top of the website in order to make more room for the page
+                            content. It will contain seven items: the logo, five pages, and language settings. The pages
+                            reachable from the navbar will be Home, Products, Resellers, Exhibitions and Support. Many
+                            modern websites do not have a Home button, but instead use the logo as the link to Home.
+                            However, since UltraGlozz has older consumers, I chose to have a Home link in the navbar so
+                            it will be easy to find.</li>
+                        <li>The home page should make the user understand what the company does rigth away. It will
+                            focus
+                            on their main product: UltraGlozz Superpolish, but also show that they have other polishes
+                            as well. I also want the user to get intrigued, so I want a Call to Action taking the user
+                            to the UltraGlozz Superpolish product page.</li>
+                        <li>A problem in the current website is that it is difficult to get a overview of their polishes
+                            and understand the difference between them. On the product page I want to make it easy to
+                            find all polishes and compare them.</li>
+                        <li>On the product page for a single product, the user should be able the find the information
+                            they are looking for in no time. There should be an intro with a product summary, and if the
+                            user want to learn more they can scroll to learn more.</li>
+                        <li>When the user is looking for a place to buy a product from UltraGlozz, they should be able
+                            to
+                            search for companies and/or locations. This will be a function on the reseller page.</li>
+                        <li>On the exhibition page the user can find upcoming exhibitions.</li>
+                        <li>The support page will be a place where the user can find all documentation and FAQ's for
+                            their products, and also contact the company.</li>
+                        <li>The newletter will be moved to the footer, together with company info and social medias.
+                        </li>
+                    </ul>
+
+                    <h3>Paper sketches</h3>
+                    <p>Before starting in Adobe XD I did some quick sketches on paper, just to have some reference on
+                        what the designs should contain.</p>
+                    <div class="grid" id="paper">
+                        <img class="img-shadow" src="../media/ultraglozz-paper-1.png" alt="Paper prototype">
+                        <img class="img-shadow" src="../media/ultraglozz-paper-2.png" alt="Paper prototype">
+                        <img class="img-shadow" src="../media/ultraglozz-paper-3.png" alt="Paper prototype">
+                    </div>
+                    <p class="caption">Paper sketches</p>
+
+                    <h3>Wireframes</h3>
+                    <p>The next step was to make wireframes. This was made in Adobe XD. I also made mobile versions but
+                        below I only show the desktop versions.</p>
+                    <div class="grid" id="wireframe">
+                        <div>
+                            <img class="img-shadow" src="../media/ultraglozz-wireframe-home.png"
+                                alt="Wireframe of UltraGlozz home page">
+                            <img class="img-shadow" src="../media/ultraglozz-wireframe-reseller.png"
+                                alt="Wireframe of UltraGlozz reseller page">
+                            <img class="img-shadow" src="../media/ultraglozz-wireframe-support.png"
+                                alt="Wireframe of UltraGlozz support page">
+                        </div>
+                        <div>
+                            <img class="img-shadow" src="../media/ultraglozz-wireframe-products.png"
+                                alt="Wireframe of UltraGlozz products page">
+                            <img class="img-shadow" src="../media/ultraglozz-wireframe-superpolish.png"
+                                alt="Wireframe of UltraGlozz Superpolish page">
+                        </div>
+                    </div>
+                    <p class="caption">Wireframes</p>
+
+                    <h3>Fonts and colors</h3>
+                    <p>UltraGlozz's color is red, and therefore the website will have a red primary color (something I
+                        will talk about again in the discussion). The strong color will be complemented with neutral
+                        colors. I want a modern and simple look of the website, and the texts should be easy to read. I
+                        chose Open Sans as font because it is modern and a bit playful, but without being unserious.
+                        Below is the font sizes I went with in the mock-up, but this how well the font with size 80 px
+                        went when I implemented the design will be discussed later...</p>
+                    <img class="small-img img-shadow" class="img-shadow" src="../media/ultraglozz-fontscolors.png"
+                        alt="Fonts and colors of the design">
+                    <p class="caption">Fonts and colors of the design</p>
                 </div>
+                <div id="result">
+                    <h2>The result</h2>
+                    <h3>Home page</h3>
+                    <p>The scrollable home page makes it effortless for the user to get more information and allows more
+                        and intriguing paths leading to other pages. It is obvious what the company does and the user
+                        are immediately introduced to their best selling product. The language settings now focus on the
+                        language rather than countries. The buttons no longer have any corner radius, to give the
+                        website a more serious feeling. The footer is not designed yet.</p>
+                    <img class="img-shadow" src="../media/ultraglozz-result-home.png" alt="Mock-up of home page">
+                    <p class="caption">Mock-up of home page</p>
+
+                    <h3>Products page</h3>
+                    <p>The products page has gotten a new look since the wireframes. Now it is easier for the user to
+                        compare the products and understand what differs between them.</p>
+                    <img src="../media/ultraglozz-result-products.png" alt="Mock-up of products page"
+                        class="img-shadow">
+                    <p class="caption">Mock-up of products page</p>
+
+                    <h3>Single product page</h3>
+                    <p>The page for a single product begins with a summary and some quick facts. If the user scroll on
+                        they can read about the usages of the product. They also get both a video and a written step by
+                        step guide on how to use it. If the user wants to learn even more, they can navigate between the
+                        tabs with FAQs, detailed intructions of use and product specification. By now they probably
+                        wonder where they can get this product, and then they see the reseller section with featured
+                        companies.</p>
+                    <img src="../media/ultraglozz-result-superpolish.png"
+                        alt="Mock-up of Ultraglozz Superpolish product page" class="img-shadow">
+                    <p class="caption">Mock-up of Ultraglozz Superpolish product page</p>
+
+                    <h3>Resellers page</h3>
+                    <p>The user can serach for companies or locations and get suggestions of resellers. They can also
+                        quick search by using "find nearest" and location services.</p>
+                    <img src="../media/ultraglozz-result-resellers.png" alt="Mock-up of resellers page"
+                        class="img-shadow">
+                    <p class="caption">Mock-up of resellers page</p>
+
+                    <h3>Support page</h3>
+                    <p>On the support page the user can find FAQs, product documentation and contact info. The FAQs
+                        showing here are only placeholders. It is supposed to be both general and product specific
+                        questions. Placing the contact info on the bottom of the page makes the user more likely to find
+                        their answer in some of the tabs first. However, there is a button on the top of the page that
+                        scrolls down the user to the contact info section. The user gets multiple ways to contact the
+                        company, and also knows when the support team is working.</p>
+                    <img src="../media/ultraglozz-result-support.png" alt="Mock-up of support page" class="img-shadow">
+                    <p class="caption">Mock-up of support page</p>
+                </div>
+
+                <div id="discussion">
+                    <h2>Discussion and lessons learnt</h2>
+                    <p>This was the first website I designed and actually implemented. The first thing I noticed when I
+                        started coding and actually seeing the design in a browser was the font sizes. The gap from 17
+                        to 80px was huge and made the design feel inconsistent. For example, the step by step guide
+                        under the instructions video has a very small font size compared to the rest of the design. When
+                        implementing the design, I made the largest fonts smaller. The artboards in Adobe XD were 1920px
+                        wide, which made me believe I hade much more space than you actually have on most devices.</p>
+                    <p>The main color of the website is red. This is the company's main color, so it makes sense to use
+                        it, but at the same time it is a color that is associated with warnings. It would probably make
+                        the website friendlier if more neutral colors were used.</p>
+                    <p>If I had more time working on the design I would spend most of it on the products and single
+                        product page. The accessories section feels a bit awkwardly placed. I would also redesign the
+                        cars,boats and home sections on the single product page, making it look less graphical and
+                        instead more technical.</p>
+                </div>
+
                 <div id="conclusion">
                     <h2>Conclusion</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                        the Semantics, a large language ocean. A small river named Duden flows by their place and
-                        supplies it with the necessary regelialia. </p>
+                    <p>The new design has a modern look that is easy to navigate in. My goal was to make is easy for the
+                        users to understand the purpose of the company and their products, which I think I succeeded
+                        with. However, this was my first webdesign that I actually implemented, and I made many rookie
+                        mistakes that I learnt from.</p>
                 </div>
             </div>
         </div>
     </section>
+    <a href="#ultraglozz-page">
+     <div class="scroll-me-up img-shadow">
+        <i class="fas fa-arrow-up"></i>
+        <p class="overline">up</p>
+        </div>
+    </a>
 
 
 </body>

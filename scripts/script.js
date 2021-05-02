@@ -15,7 +15,6 @@ var observer = new IntersectionObserver(function (entries) {
     if (entries[0].isIntersecting === true) {
         document.querySelector(".bottom").style.opacity = "1";
         document.querySelector(".scroll-me-up").style.opacity = "1";
-        console.log('Element has just become visible in screen');
     } else {
         document.querySelector(".bottom").style.opacity = "0";
         document.querySelector(".scroll-me-up").style.opacity = "0";

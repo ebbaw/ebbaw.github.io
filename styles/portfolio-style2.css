@@ -189,8 +189,12 @@ header {
 
 header .flex {
     justify-content: center;
-    gap: 5rem;
     flex-wrap: wrap;
+}
+
+#logo {
+    margin-right: 5rem;
+    margin-left: 5rem;
 }
 
 .nav-word {
@@ -324,7 +328,7 @@ header .flex {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem 2rem;
+    gap: 2rem;
 }
 
 .case-study {
@@ -464,6 +468,10 @@ header .flex {
     max-height: 600px;
     padding: 5rem 0;
     color: var(--text-white);
+}
+
+#about-ebba.grid {
+    align-items: center;
 }
 
 .intro img {
@@ -666,8 +674,8 @@ header .flex {
     header {
         height: 120px;
     }
-    #nav-ul.flex {
-        gap: 32px;
+    #logo {
+        margin-bottom: 32px;
     }
     #nav-ul li:nth-child(2) {
         order: -1;

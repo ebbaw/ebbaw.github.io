@@ -203,7 +203,7 @@ header .flex {
     letter-spacing: 0.3rem;
     transition: 0.2s;
     text-align: center;
-    width: 10rem;
+    max-width: 10rem;
 }
 
 .nav-word:hover {
@@ -316,19 +316,33 @@ header .flex {
     margin: auto;
 }
 
+.intro-text {
+    margin-bottom: 4rem;
+}
+
+.intro-description {
+    margin-bottom: 4rem;
+}
+
 #ultraglozz-page .intro-image {
     max-width: 100%;
 }
 
 .intro-facts {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    display: flex;
+    display: inline-flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    --gap: 32px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+    width: calc(100% + var(--gap));
+}
+
+.intro-facts>* {
+    margin: var(--gap) 0 0 var(--gap);
 }
 
 .case-study {
@@ -635,7 +649,7 @@ header .flex {
 
 /*--- Extra for intro ---*/
 
-@media (max-width: 764px) {
+@media (max-width: 853px) {
     .case-intro.grid, #about-ebba.grid {
         grid-template-columns: 1fr;
     }
@@ -685,9 +699,6 @@ header .flex {
     #nav-ul li:not(:nth-child(2)) {
         flex: 1;
     }
-    .nav-word {
-        max-width: 7rem;
-    }
     .inner-case-study.grid {
         grid-template-columns: 1fr;
     }
@@ -699,7 +710,7 @@ header .flex {
     }
 }
 
-@media (max-width: 515px) {
+@media (max-width: 578px) {
     .intro-facts {
         justify-content: space-around;
         text-align: center;

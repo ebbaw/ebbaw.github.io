@@ -212,11 +212,43 @@ header .flex {
 
 /*---- Hero ----*/
 
+#hero {
+    animation-name: slowfade;
+    animation-duration: 3s;
+}
+
 .hero-text {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     margin-top: 25vh;
+}
+
+#space-holder {
+    height: 250px;
+}
+
+#hero .vl {
+    animation-name: grow;
+    animation-duration: 3s;
+}
+
+@keyframes slowfade {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes grow {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 250px;
+    }
 }
 
 /*---- Index cases ----*/
@@ -284,10 +316,15 @@ header .flex {
     max-width: 100%;
 }
 
-.intro-facts.grid {
+.intro-facts {
     margin-top: 4rem;
     margin-bottom: 4rem;
-    grid-template-columns: 2fr 3fr 3fr;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
 }
 
 .case-study {
@@ -389,10 +426,35 @@ header .flex {
     bottom: 20px;
     right: 20px;
     text-align: center;
+    opacity: 0%;
 }
 
 .scroll-me-up i {
     color: var(--primary-black);
+}
+
+/* Progress bar stuff */
+
+.bottom {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    opacity: 0%;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--primary-black);
+    width: 0%;
 }
 
 /*--- About ---*/
@@ -569,13 +631,16 @@ header .flex {
     .case-intro.grid, #about-ebba.grid {
         grid-template-columns: 1fr;
     }
+    #ultraglozz-page .case-intro.grid {
+        grid-template-columns: 1fr;
+    }
     .intro {
         padding-top: 3rem;
         padding-bottom: 0;
         max-height: fit-content;
         height: fit-content;
     }
-    #intro-image {
+    .intro-image {
         order: -1;
         max-width: 50%;
     }
@@ -602,7 +667,7 @@ header .flex {
         height: 120px;
     }
     #nav-ul.flex {
-        gap: 2rem;
+        gap: 32px;
     }
     #nav-ul li:nth-child(2) {
         order: -1;
@@ -621,19 +686,23 @@ header .flex {
     #paper.grid {
         grid-template-columns: 1fr;
     }
-    .intro-facts.grid {
-        grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
-    }
     #resume .grid {
         grid-template-columns: 1fr;
     }
 }
 
+@media (max-width: 515px) {
+    .intro-facts {
+        justify-content: space-around;
+        text-align: center;
+    }
+}
+
 /*--- Mobile ---*/
 
-@media (max-width: 411px) {
+@media (max-width: 414px) {
     .container {
-        padding: 0 10px;
+        padding: 0 15px;
     }
     .outer-case {
         padding: 0 10px;
@@ -649,5 +718,20 @@ header .flex {
     }
     .hero-text {
         margin-top: 15vh;
+    }
+    #space-holder {
+        height: 150px;
+    }
+    #hero .vl {
+        animation-name: grow-mobile;
+        height: 150px;
+    }
+    @keyframes grow-mobile {
+        0% {
+            height: 0px;
+        }
+        100% {
+            height: 150px;
+        }
     }
 }

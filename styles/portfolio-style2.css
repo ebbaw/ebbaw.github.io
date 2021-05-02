@@ -206,10 +206,6 @@ header .flex {
     max-width: 10rem;
 }
 
-.nav-word:hover {
-    letter-spacing: 0.4rem;
-}
-
 #logo {
     max-width: 100px;
 }

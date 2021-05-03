@@ -480,6 +480,11 @@ header .flex {
     color: var(--text-white);
 }
 
+#about-ebba {
+    animation-name: slowfade;
+    animation-duration: 3s;
+}
+
 #about-ebba.grid {
     align-items: center;
 }

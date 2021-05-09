@@ -495,11 +495,10 @@ header .flex {
 
 .about-contact.grid {
     margin-top: 4rem;
-    margin-bottom: 4rem;
 }
 
 #portrait {
-    margin-left: auto;
+    margin-left: 5rem;
 }
 
 .intro .vl {
@@ -667,10 +666,14 @@ header .flex {
         order: -1;
         max-width: 50%;
     }
+    .intro .flex {
+        flex-direction: column;
+    }
     #portrait {
         order: -1;
         max-width: 60%;
-        margin: auto;
+        margin-left: 0;
+        margin-bottom: 3rem;
     }
     .intro .vl {
         height: 100px;
